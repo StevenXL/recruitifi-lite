@@ -1,4 +1,6 @@
 <div id='header'>
+  <%= link_to 'Home', root_path %>
+  |
   <% if user_signed_in? %>
     <div id='user'>
       <%= link_to current_user.name, send("#{current_user.class.to_s.downcase}_path", current_user) %>

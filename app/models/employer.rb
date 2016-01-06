@@ -12,4 +12,8 @@
 
 class Employer < ActiveRecord::Base
   has_many :jobs
+
+  def to_s
+    self.name
+  end
 end

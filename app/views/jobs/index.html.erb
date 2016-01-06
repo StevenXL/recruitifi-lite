@@ -17,7 +17,7 @@
       <tr>
         <td><%= job.title %></td>
         <td><%= job.description %></td>
-        <td><%= job.employer %></td>
+        <td><%= link_to job.employer, employer_path(job.employer_id) %></td>
         <td><%= link_to 'Show', job %></td>
         <td><%= link_to 'Edit', edit_job_path(job) %></td>
         <td><%= link_to 'Destroy', job, method: :delete, data: { confirm: 'Are you sure?' } %></td>
