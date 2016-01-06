@@ -15,5 +15,14 @@
   <%= @job.employer %>
 </p>
 
+<p>
+  <strong>Recruiters:</strong>
+  <ul>
+    <% @job.recruiters.each do |recruiter| %>
+      <li><%= link_to recruiter.name, recruiter_path(recruiter) %></li>
+    <% end %>
+  </ul>
+</p>
+
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
