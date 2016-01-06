@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :recruiters
   resources :employers
 
+  post "/questions", to: "questions#create"
+
   # routes for FBLS
   scope as: :sessions, :controller => :sessions do
     get :new

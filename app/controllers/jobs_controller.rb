@@ -22,6 +22,7 @@ class JobsController < ApplicationController
   # GET /jobs/1
   # GET /jobs/1.json
   def show
+    @question = @job.questions.build
   end
 
   # GET /jobs/new

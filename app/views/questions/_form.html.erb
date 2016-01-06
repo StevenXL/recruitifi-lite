@@ -1,0 +1,7 @@
+<%= form_for @question do |f| %>
+  <%= f.hidden_field :job_id %>
+
+  <p><%= f.text_field :body, placeholder: "Your Question Here" %></p>
+
+  <p><%= f.submit %></p>
+<% end %>

@@ -24,5 +24,18 @@
   </ul>
 </p>
 
+<h3>Current Question</h3>
+<div class="questions">
+  <%= render @job.questions %>
+</div>
+
+<% if current_user && current_user.is_a?(Recruiter) %>
+  <h3>Ask a Question</h3>
+
+  <div class="questions-form">
+    <%= render 'questions/form' %>
+  </div>
+<% end %>
+
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>

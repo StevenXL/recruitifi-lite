@@ -12,6 +12,7 @@
 
 class Job < ActiveRecord::Base
   belongs_to :employer
+  has_many :questions
 
   has_many :matches
   has_many :recruiters, through: :matches
