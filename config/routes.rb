@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :jobs
+  resources :recruiters
+  resources :employers
+
+  # routes for FBLS
+  scope as: :sessions, :controller => :sessions do
+    get :new
+    post :create
+    delete :destroy
+  end
+
+ root :to => 'sessions#new', :via => :get
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
